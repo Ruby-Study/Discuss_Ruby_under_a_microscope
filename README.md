@@ -4,4 +4,4 @@
 
 ###第五章
 
-[问题1: 关于obj.class方法的疑问](c5/about_obj_class.md)
+[问题1: 关于obj.class方法的疑问](C5/about_obj_class)
