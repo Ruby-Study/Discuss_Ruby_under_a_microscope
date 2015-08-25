@@ -44,7 +44,7 @@ puts RubyVM::InstructionSequence.compile(code).disasm
 
 那么我们继续从Ruby源码中挖掘其中的秘密。
 
-按老方法，我们发现了prepend的主要功能函数： https://github.com/ruby/ruby/blob/2e2bd1c26b21ab3298b32f881bccebc14c7cac3d/class.c#L935
+按老方法(参考：[问题1: 关于obj.class方法的疑问](C5/about_obj_class.md))，我们发现了prepend的[主要功能函数](https://github.com/ruby/ruby/blob/2e2bd1c26b21ab3298b32f881bccebc14c7cac3d/class.c#L935)： 
 
 ```c
 void
