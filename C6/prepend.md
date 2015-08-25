@@ -3,7 +3,9 @@
 
 ---
 
-第6章中讲了Ruby prepend 模块的实现方式，我产生一个疑问： 当Ruby在把目标类副本设置为前置模块的超类，把原始的目标类方法移动到目标类副本中之后，原始目标类中那些方法还存在吗？
+第6章中讲了Ruby prepend 模块的实现方式，我产生一个疑问：
+
+    当Ruby在把目标类副本设置为前置模块的超类，把原始的目标类方法移动到目标类副本中之后，原始目标类中那些方法还存在吗？
 
 
 根据prepend造成的行为，原始目标类中那些方法应该是不存在了。但是这只是猜测，Pat在书中也未明说，我需要看到证据。
@@ -44,7 +46,7 @@ puts RubyVM::InstructionSequence.compile(code).disasm
 
 那么我们继续从Ruby源码中挖掘其中的秘密。
 
-按老方法(参考：[问题1: 关于obj.class方法的疑问](../C5/about_obj_class.md))，我们发现了prepend的[主要功能函数](https://github.com/ruby/ruby/blob/2e2bd1c26b21ab3298b32f881bccebc14c7cac3d/class.c#L935)： 
+按老方法(参考：[问题1: 关于obj.class方法的疑问](../C5/about_obj_class.md))，我们发现了prepend的[主要功能函数](https://github.com/ruby/ruby/blob/2e2bd1c26b21ab3298b32f881bccebc14c7cac3d/class.c#L935)：
 
 ```c
 void
