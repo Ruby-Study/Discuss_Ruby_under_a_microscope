@@ -13,4 +13,6 @@ QQ群: 219421893
 
 [问题2: Ruby的prepend实现有关的问题](C6/prepend.md)
 
-[相关博文列表](Blog/)
+相关博文列表:
+[Ruby+OMR JIT简介](Blog/IBM_OMR_RUBY_JIT.md)
+[深思：Ruby中为什么不能显式的调用私有方法](Blog/why_can_not_add_receiver_for_private_method_in_ruby.md)
